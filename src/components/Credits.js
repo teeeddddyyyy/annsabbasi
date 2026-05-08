@@ -58,6 +58,14 @@ const Credits = () => {
               >
                 🎓 Udemy Certificate
               </a>
+              <a
+                className="contact-social-link"
+                href="https://drive.google.com/file/d/1fU285k5dEhJ29CyTKEdqBJeAnv6lYXC_/view?usp=drive_link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                🏅 LanguageCert B2
+              </a>
             </div>
           </div>
         </FadeInSection>

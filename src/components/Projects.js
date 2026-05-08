@@ -7,6 +7,26 @@ import FadeInSection from "./FadeInSection";
 import Carousel from "react-bootstrap/Carousel";
 
 class Projects extends React.Component {
+  state = { activeProject: null };
+
+  componentDidMount() {
+    document.addEventListener("keydown", this.handleKey);
+  }
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.handleKey);
+  }
+  handleKey = (e) => {
+    if (e.key === "Escape") this.closeModal();
+  };
+  openModal = (p) => {
+    this.setState({ activeProject: p });
+    document.body.style.overflow = "hidden";
+  };
+  closeModal = () => {
+    this.setState({ activeProject: null });
+    document.body.style.overflow = "";
+  };
+
   render() {
     const featuredProjects = [
       {
@@ -38,7 +58,7 @@ class Projects extends React.Component {
       {
         title: "SocialsBoost",
         desc:
-          "A multi-tenant social media management platform serving 10,000+ marketing teams globally. Features multi-platform post scheduling, AI-generated captions, hashtags, and image concepts powered by OpenAI. Includes full X (Twitter) Developer API integration with OAuth 2.0 PKCE flow, deployed on AWS with Terraform and GitHub Actions CI/CD achieving 99.99% uptime SLA. Vitest test suites maintain >85% coverage on critical business logic.",
+          "A multi-tenant social media management platform serving marketing teams globally. Features multi-platform post scheduling and an AI content studio powered by OpenAI that generates captions, hashtags, and image concepts — reducing content creation time by 8×. Implemented OAuth 2.0 PKCE authentication from scratch, eliminating implicit grant vulnerabilities. Deployed on AWS with Terraform and Docker, enforcing zero-downtime release strategies and achieving 99.99% uptime SLA.",
         techStack: [
           "React.js",
           "Nest.js",
@@ -47,6 +67,7 @@ class Projects extends React.Component {
           "LinkedIn API",
           "OpenAI",
           "Terraform",
+          "Docker",
           "AWS",
           "Vitest",
         ],
@@ -96,18 +117,31 @@ class Projects extends React.Component {
 
     const otherProjects = [
       {
+        title: "SocialsBoost",
+        desc: "Multi-tenant social media platform serving marketing teams globally. AI content studio (OpenAI) generates captions, hashtags, and image concepts — cutting content creation time by 8×. OAuth 2.0 PKCE auth, multi-platform scheduling, deployed on AWS with Terraform and Docker achieving 99.99% uptime.",
+        tech: "React.js · Nest.js · Twitter API · OpenAI · Terraform · Docker · AWS",
+        live: "https://www.socialsboost.tech/",
+      },
+      {
+        title: "TechTren",
+        desc: "AI financial platform — FastAPI (Python) backend and React.js frontend on AWS Elastic Beanstalk with auto-scaling and RDS. Brokerage OAuth integration processes live data at <50ms latency. Agentic AI (LangChain + OpenAI) delivers real-time market insights; TradingView charts streamed via WebSockets.",
+        tech: "React.js · FastAPI · Python · LangChain · OpenAI · AWS Elastic Beanstalk · WebSockets",
+        // github: "https://github.com/annsabbasi",
+        live: "https://www.techtren.com",
+      },
+      {
         title: "FrontDeskPro",
-        desc: "Voice-enabled AI agent integrating ElevenLabs, Twilio, Deepgram, and OpenAI. Processes 500+ calls daily with 90% intent recognition accuracy.",
-        tech: "NestJS · Next.js · PostgreSQL · AWS EC2 · OpenAI",
+        desc: "Conversational AI agent handling calls at sub-200ms latency, cutting human agent workload. Integrates ElevenLabs, Twilio, Deepgram, and AWS Nova APIs — 90% intent recognition accuracy. Async job queue architecture routes email workflows, significantly improving throughput.",
+        tech: "NestJS · Next.js · ElevenLabs · Twilio · Deepgram · AWS Nova · PostgreSQL",
         // github: "https://github.com/annsabbasi",
         live: "https://frontdeskpro.ai",
       },
       {
-        title: "TechTren",
-        desc: "AI-powered financial assistant with predictive pricing, OAuth trading integration, and real-time interactive charts for market analysis.",
-        tech: "Next.js · Node.js · AWS · OpenAI API · WebSockets",
+        title: "TryLeo",
+        desc: "Document digitization platform — reduced processing time from 5 min to 45 sec via BullMQ job queues and parallel OCR/NLP workers. Supabase + pgvector search improved retrieval speed by 70% and accuracy to 94%.",
+        tech: "Next.js · Python · Supabase · pgvector · Redis · BullMQ · OpenAI API",
         // github: "https://github.com/annsabbasi",
-        live: "https://www.techtren.com",
+        live: "http://tryleo.ai",
       },
       {
         title: "Midday",
@@ -115,19 +149,6 @@ class Projects extends React.Component {
         tech: "Next.js · tRPC · Drizzle ORM · Docker · Fly.io",
         github: "https://github.com/midday-ai/midday",
         live: "https://midday.ai",
-      },
-      {
-        title: "SocialsBoost",
-        desc: "Multi-tenant social media management platform serving 10,000+ marketing teams. AI content studio with OpenAI, full X (Twitter) OAuth 2.0 PKCE integration, and AWS infrastructure achieving 99.99% uptime.",
-        tech: "React.js · Nest.js · Twitter API · OpenAI · Terraform · AWS",
-        live: "https://www.socialsboost.tech/",
-      },
-      {
-        title: "TryLeo",
-        desc: "Converts handwritten historical records into searchable digital formats using advanced OCR and NLP pipelines.",
-        tech: "Next.js · Python · OpenAI API · Redis · BullMQ",
-        // github: "https://github.com/annsabbasi",
-        live: "http://tryleo.ai",
       },
       {
         title: "CatchACharacter",
@@ -259,13 +280,96 @@ class Projects extends React.Component {
                     </span>
                   </div>
                   <div className="card-title">{p.title}</div>
-                  <div className="card-desc">{p.desc}</div>
+                  {p.desc.length > 160 ? (
+                    <div className="card-desc-wrap">
+                      <div className="card-desc">{p.desc}</div>
+                    </div>
+                  ) : (
+                    <div className="card-desc">{p.desc}</div>
+                  )}
+                  {p.desc.length > 160 && (
+                    <button
+                      className="card-read-more"
+                      onClick={() => this.openModal(p)}
+                    >
+                      read more
+                    </button>
+                  )}
                   <div className="card-tech">{p.tech}</div>
                 </li>
               </FadeInSection>
             ))}
           </ul>
         </div>
+
+        {/* ── Project detail modal ── */}
+        {this.state.activeProject && (
+          <div
+            className="proj-modal-overlay"
+            onClick={this.closeModal}
+            role="dialog"
+            aria-modal="true"
+          >
+            <div
+              className="proj-modal"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                className="proj-modal-close"
+                onClick={this.closeModal}
+                aria-label="Close"
+              >
+                ✕
+              </button>
+
+              <div>
+                <p className="proj-modal-overline">Project Details</p>
+                <h3 className="proj-modal-title">
+                  {this.state.activeProject.title}
+                </h3>
+              </div>
+
+              <p className="proj-modal-body">
+                {this.state.activeProject.desc}
+              </p>
+
+              <div className="proj-modal-tech">
+                {this.state.activeProject.tech
+                  .split(" · ")
+                  .map((t, i) => (
+                    <span key={i} className="proj-modal-pill">
+                      {t}
+                    </span>
+                  ))}
+              </div>
+
+              <div className="proj-modal-links">
+                {this.state.activeProject.github && (
+                  <a
+                    href={this.state.activeProject.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="feat-link-btn"
+                  >
+                    <GitHubIcon style={{ fontSize: 15 }} />
+                    Code
+                  </a>
+                )}
+                {this.state.activeProject.live && (
+                  <a
+                    href={this.state.activeProject.live}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="feat-link-btn"
+                  >
+                    <OpenInBrowserIcon style={{ fontSize: 16 }} />
+                    Live Demo
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     );
   }
