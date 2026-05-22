@@ -20,7 +20,7 @@ const Credits = () => {
             <p className="contact-sub">
               I'm always open to new opportunities, interesting projects, and
               great conversations. Whether you have a role, a project, or just
-              want to say hello — my inbox is open.
+              want to say hello my inbox is open.
             </p>
 
             <a

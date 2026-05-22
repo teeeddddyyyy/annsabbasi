@@ -59,26 +59,29 @@ const JobList = () => {
 
   const experienceItems = {
     "Algotix AI": {
-      jobTitle: "Software Engineer",
+      jobTitle: "Senior Software Engineer",
       duration: "Feb 2024 – Present",
       companyUrl: "https://www.algotix.ai/",
       desc: [
-        "Implemented distributed, event-driven architectures using message queues and microservices to handle high-traffic scenarios reliably.",
-        "Maintained production-grade backend services supporting large-scale customer engagement platforms.",
-        "Collaborated with cross-functional teams (product, QA, DevOps) to ship new features with strong reliability guarantees and strict SLAs.",
-        "Established CloudWatch monitoring and alerting systems, reducing incident response time by 40% through proactive issue detection.",
-        "Managed infrastructure-as-code with Terraform, enabling reproducible, version-controlled cloud environments across staging and production.",
+        "Architected asynchronous processing pipelines using BullMQ and AWS SQS, enabling the platform to handle high-concurrency workloads reliably with automatic retry logic, dead-letter queues, and horizontal worker scaling.",
+        "Led infrastructure modernization initiative: migrated key services to containerized ECS deployments with Terraform-managed IaC, achieving reproducible environment provisioning across staging and production and eliminating configuration drift.",
+        "Own end-to-end design and delivery of distributed, event-driven microservice systems on AWS from initial architecture through production deployment, monitoring, and incident response.",
+        "Established full observability stack CloudWatch custom metrics, distributed tracing, structured logging, and automated alerting reducing mean time to detection (MTTD) of production incidents by 40%.",
+        "Drive technical decisions in cross-functional Agile sprints: conduct architectural reviews, lead code reviews for the team, define API contracts, and enforce SLA compliance across critical services.",
+        "Introduced API contract testing and integration test coverage, reducing production regression bugs by 30% across quarterly releases.",
       ],
     },
     "Rehman Solutions": {
-      jobTitle: "Full-Stack Developer",
-      duration: "Sept 2022 – Feb 2024",
+      jobTitle: "Full-Stack Software Engineer",
+      duration: "Sep 2022 – Feb 2024",
       companyUrl: "https://www.rahmansolutions.com/",
       desc: [
-        "Led a cross-functional team of 5 engineers, introducing Agile practices that raised sprint velocity by 40% and pushed on-time delivery from 65% to 92%.",
-        "Established end-to-end CI/CD pipelines synced with infrastructure, enabling single-command deployment and reducing manual errors and release delays by 95%.",
-        "Optimized GCP Cloud Run functions and API layers, improving response times by 25% while cutting monthly cloud spend by 20%.",
-        "Resolved deep performance bottlenecks through algorithmic optimization and code refactoring, measurably reducing p95 latency across key endpoints.",
+        "Delivered full-stack features across client-facing products using React.js, Node.js, and NestJS; collaborated in a 5-person engineering team and contributed to architecture and technical direction.",
+        "Proactively learned and applied CI/CD practices contributed to pipeline improvements using GitHub Actions that reduced manual deployment steps and release friction for the team.",
+        "Identified and fixed several API performance issues through query optimization and code refactoring improvements were noticed by senior engineers and led to more responsibility over time.",
+        "Optimized GCP Cloud Run services through query optimization, Redis caching, and service right-sizing for faster responses.",
+        "Collaborated closely with senior engineers and absorbed best practices in code structure, Git workflows, and REST API design applying learnings to every feature built.",
+        "Established code quality standards linting, pre-commit hooks, unit test coverage thresholds and contributed to internal onboarding documentation adopted across the team.",
       ],
     },
   };

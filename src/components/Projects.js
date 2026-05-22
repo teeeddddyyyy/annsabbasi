@@ -58,7 +58,7 @@ class Projects extends React.Component {
       {
         title: "SocialsBoost",
         desc:
-          "A multi-tenant social media management platform serving marketing teams globally. Features multi-platform post scheduling and an AI content studio powered by OpenAI that generates captions, hashtags, and image concepts — reducing content creation time by 8×. Implemented OAuth 2.0 PKCE authentication from scratch, eliminating implicit grant vulnerabilities. Deployed on AWS with Terraform and Docker, enforcing zero-downtime release strategies and achieving 99.99% uptime SLA.",
+          "A multi-tenant social media management platform serving marketing teams globally. Features multi-platform post scheduling and an AI content studio powered by OpenAI that generates captions, hashtags, and image concepts reducing content creation time by 7×. Implemented OAuth 2.0 PKCE authentication from scratch across 5+ social platforms, eliminating implicit grant vulnerabilities. Deployed on AWS (ECS, RDS, S3, CloudFront) with Terraform and Docker, achieving 99.9% uptime SLA.",
         techStack: [
           "React.js",
           "Nest.js",
@@ -118,27 +118,27 @@ class Projects extends React.Component {
     const otherProjects = [
       {
         title: "SocialsBoost",
-        desc: "Multi-tenant social media platform serving marketing teams globally. AI content studio (OpenAI) generates captions, hashtags, and image concepts — cutting content creation time by 8×. OAuth 2.0 PKCE auth, multi-platform scheduling, deployed on AWS with Terraform and Docker achieving 99.99% uptime.",
+        desc: "Multi-tenant social media platform serving marketing teams globally. AI content studio (OpenAI) generates captions, hashtags, and image concepts cutting content creation time by 7×. OAuth 2.0 PKCE auth across 5+ platforms, multi-platform scheduling, deployed on AWS with Terraform and Docker achieving 99.9% uptime.",
         tech: "React.js · Nest.js · Twitter API · OpenAI · Terraform · Docker · AWS",
         live: "https://www.socialsboost.tech/",
       },
       {
         title: "TechTren",
-        desc: "AI financial platform — FastAPI (Python) backend and React.js frontend on AWS Elastic Beanstalk with auto-scaling and RDS. Brokerage OAuth integration processes live data at <50ms latency. Agentic AI (LangChain + OpenAI) delivers real-time market insights; TradingView charts streamed via WebSockets.",
+        desc: "AI financial platform FastAPI (Python) backend and React.js frontend on AWS Elastic Beanstalk with auto-scaling and RDS. Brokerage OAuth integration processes live data at <50ms latency. Agentic AI (LangChain + OpenAI) delivers real-time market insights; TradingView charts streamed via WebSockets.",
         tech: "React.js · FastAPI · Python · LangChain · OpenAI · AWS Elastic Beanstalk · WebSockets",
         // github: "https://github.com/annsabbasi",
         live: "https://www.techtren.com",
       },
       {
         title: "FrontDeskPro",
-        desc: "Conversational AI agent handling calls at sub-200ms latency, cutting human agent workload. Integrates ElevenLabs, Twilio, Deepgram, and AWS Nova APIs — 90% intent recognition accuracy. Async job queue architecture routes email workflows, significantly improving throughput.",
+        desc: "Conversational AI agent handling calls at sub-200ms latency, cutting human agent workload. Integrates ElevenLabs, Twilio, Deepgram, and AWS Nova APIs 90% intent recognition accuracy. Async job queue architecture routes email workflows, significantly improving throughput.",
         tech: "NestJS · Next.js · ElevenLabs · Twilio · Deepgram · AWS Nova · PostgreSQL",
         // github: "https://github.com/annsabbasi",
         live: "https://frontdeskpro.ai",
       },
       {
         title: "TryLeo",
-        desc: "Document digitization platform — reduced processing time from 5 min to 45 sec via BullMQ job queues and parallel OCR/NLP workers. Supabase + pgvector search improved retrieval speed by 70% and accuracy to 94%.",
+        desc: "Document digitization platform reduced processing time from 5 min to 45 sec via BullMQ job queues and parallel OCR/NLP workers. Supabase + pgvector search improved retrieval speed by 70% and accuracy to 94%.",
         tech: "Next.js · Python · Supabase · pgvector · Redis · BullMQ · OpenAI API",
         // github: "https://github.com/annsabbasi",
         live: "http://tryleo.ai",

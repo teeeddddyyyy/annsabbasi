@@ -6,35 +6,38 @@ const About = () => {
   const stats = [
     { number: "3.5+", label: "Years of Experience" },
     { number: "10+", label: "Production Projects" },
-    // { number: "100K+",label: "App Downloads" },
-    { number: "40%", label: "Sprint Velocity Improved" },
-    { number: "92%", label: "On-Time Project Delivery" },
+    { number: "40%", label: "Faster Incident Detection" },
+    { number: "6×", label: "Doc Processing Speed" },
   ];
 
   const skills = [
     {
       label: "Frontend",
-      items: ["React.js", "Next.js", "TypeScript", "React Native"],
+      items: ["React.js", "Next.js", "TypeScript", "React Native", "ElectronJS"],
     },
     {
       label: "Backend",
       items: ["Node.js", "NestJS", "Python", "FastAPI", "Django DRF"],
     },
     {
-      label: "AI & GenAI",
-      items: ["LangChain", "LangGraph", "OpenAI API", "Deepgram", "ElevenLabs"],
+      label: "AI & LLM",
+      items: ["LangChain", "LangGraph", "OpenAI API", "AWS Nova", "RAG Pipelines"],
+    },
+    {
+      label: "Voice & Media",
+      items: ["Deepgram (STT)", "ElevenLabs (TTS)", "AssemblyAI", "Twilio"],
     },
     {
       label: "Database & Cache",
-      items: ["PostgreSQL", "MongoDB", "Redis", "Supabase", "BullMQ", "Drizzle ORM"],
+      items: ["PostgreSQL", "MongoDB", "Redis", "pgvector", "BullMQ", "AWS SQS"],
     },
     {
       label: "Cloud & DevOps",
       items: ["AWS", "Terraform", "Docker", "GCP", "Nginx", "GitHub Actions"],
     },
     {
-      label: "APIs & Other",
-      items: ["GraphQL", "Socket.IO", "WebSockets", "tRPC", "Electron Js"],
+      label: "APIs & Auth",
+      items: ["GraphQL", "tRPC", "WebSockets", "OAuth 2.0 PKCE", "JWT", "RBAC"],
     },
   ];
 
@@ -52,30 +55,32 @@ const About = () => {
           <div className="about-grid">
             <div className="about-bio">
               <p>
-                I am a <strong>Senior Software Engineer</strong> currently at{" "}
+                I am a <strong>Senior Full-Stack Software Engineer</strong> currently at{" "}
                 <a href="https://www.algotix.ai/" target="_blank" rel="noreferrer">
                   Algotix AI
                 </a>
-                , where I architect and ship production-grade web, mobile, and
-                AI-driven applications. My work spans cloud infrastructure on AWS,
-                real-time systems with WebSockets, and AI automation pipelines
-                using LangChain and LangGraph with OpenAI.
+                , where I own the end-to-end design and delivery of distributed,
+                event-driven microservice systems on AWS from architecture through
+                production deployment, monitoring, and incident response. I've delivered
+                measurable results including a 40% reduction in incident detection time
+                and a 30% drop in production regression bugs.
               </p>
               <p>
                 Previously at{" "}
                 <a href="https://www.rahmansolutions.com/" target="_blank" rel="noreferrer">
                   Rehman Solutions
                 </a>
-                , I led a cross-functional team of 5 developers, improving sprint
-                velocity by 40% and delivering enterprise mobile apps with
-                offline-first architecture.
+                , I collaborated in a 5-person engineering team delivering full-stack
+                features using React.js, Node.js, and NestJS contributing to
+                architecture, CI/CD pipelines, and API performance improvements
+                while absorbing best practices across the full engineering lifecycle.
               </p>
               <p>
                 I have a deep interest in <strong>Agentic AI systems</strong> and{" "}
-                <strong>Generative AI</strong> — from building autonomous research
-                agents with LangGraph to integrating LLMs into production
-                workflows. Outside of code, I enjoy football, strategy games, and
-                exploring new system architectures.
+                <strong>Generative AI</strong> from building autonomous research
+                agents with LangGraph to integrating LLMs and RAG pipelines into
+                production workflows. Currently active in Kubernetes, advanced system
+                design, and agentic LLM workflows.
               </p>
             </div>
 

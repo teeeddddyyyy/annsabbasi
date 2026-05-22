@@ -23,12 +23,11 @@ const Intro = ({ theme }) => {
             </h1>
 
             <p className="hero-role">
-              Senior Software Engineer &amp; AI Systems Builder
+              Senior Software Engineer · Cloud &amp; DevOps · AI Systems
             </p>
 
             <p className="hero-desc">
-              I design and ship production-grade web, mobile, and AI-driven
-              platforms from real-time systems to agentic AI pipelines deployed and trusted by thousands of users in live environments.
+              I architect and ship production-grade systems across web, mobile, cloud, and AI from distributed microservices on AWS to agentic LLM pipelines delivering measurable results in real-world, high-scale environments.
             </p>
 
             <div className="hero-cta">

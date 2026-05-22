@@ -1,17 +1,11 @@
-# Hi there!
+# Anns Abbasi
 
-I'm **[Anns Abbasi](https://annsabbasi.vercel.app)** a **Full-Stack Software Engineer** specializing in **DevOps & Cloud Infrastructure**.
+Senior Software Engineer specializing in Cloud & DevOps and AI Systems.
 
-I currently work as a **Software Engineer** at **[Algotix AI](https://www.algotix.ai/)** building distributed, event-driven systems and production-grade backend services with a strong focus on cloud infrastructure and AI-driven platforms. Previously, I worked as a **Full-Stack Developer** at **[Rehman Solutions](https://www.rahmansolutions.com/)** leading and contributing to real-time systems.
+Currently at **[Algotix AI](https://www.algotix.ai/)** — building distributed microservices, event-driven pipelines, and cloud infrastructure on AWS, while optimizing backend performance, API reliability, and production observability. Previously at **[Rehman Solutions](https://www.rahmansolutions.com/)** delivering full-stack products with React, Node.js, and NestJS.
 
-
-I enjoy solving complex engineering problems and building systems that scale.  
-Outside of work, I explore new technologies, refine system architectures, play football, and enjoy strategy games.
+Outside of work — football, strategy games, and exploring new system architectures.
 
 ---
 
-### 🔗 Connect with me
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/annsabbasi)
-[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://annsabbasi.vercel.app/)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:annsabbasi54@gmail.com)
+📫 [annsabbasi54@gmail.com](mailto:annsabbasi54@gmail.com) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/annsabbasi) &nbsp;·&nbsp; [Portfolio](https://annsabbasi.vercel.app/)
