@@ -4,7 +4,6 @@ import FadeInSection from "./FadeInSection";
 
 const About = () => {
   const stats = [
-    { number: "3.5+", label: "Years of Experience" },
     { number: "10+", label: "Production Projects" },
     { number: "40%", label: "Faster Incident Detection" },
     { number: "6×", label: "Doc Processing Speed" },
